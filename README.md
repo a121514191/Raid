@@ -94,9 +94,9 @@ EX:兩個 120 GB 硬碟 RAID 1 陣列中的會以單一 120 GB 硬碟機給作�
 
 1.浪費二台硬碟容量
 
-對比圖
+總對比圖
 
-![](https://github.com/a121514191/docker_network/blob/master/netwok-ls.PNG)
+![](https://github.com/a121514191/Raid/blob/master/%E5%B0%8D%E7%85%A7.PNG)
 
 原文網址：
 https://kknews.cc/digital/bpy4e3o.html
@@ -108,7 +108,7 @@ https://kknews.cc/zh-tw/digital/bpy4e3o.html
 
 1.軟RAID（通過作業系統軟體來實現）
 
-Mdadm命令詳解
+Mdadm命令
 
 Linux內核中有一個md(multiple devices)模塊在底層管理RAID設備，
 
@@ -126,8 +126,35 @@ Linux內核中有一個md(multiple devices)模塊在底層管理RAID設備，
 
 ### 實驗熱插拔 (失敗)
 
+(在還未新增任何檔案和更新檔案時)
+
+原先硬碟都 正常運作
+![](https://github.com/a121514191/Raid/blob/master/01.jpg)
+拔掉一顆 也正常運作
+![](https://github.com/a121514191/Raid/blob/master/02.jpg)
+塞入也正常運作
+![](https://github.com/a121514191/Raid/blob/master/03.jpg)
+
+(在新增檔案後)
+![](https://github.com/a121514191/Raid/blob/master/04.jpg)
 
 
 ### 實驗指令fail硬碟 (失敗)
+
+之後嘗試用指令讓硬碟掛掉
+
+首先使用到剛剛所應用到的Mdadm指令
+
+先監控 Soft-RAID
+
+![](https://github.com/a121514191/Raid/blob/master/%E7%9B%A3%E6%8E%A7.PNG)
+
+查看 RAID 的狀況
+
+![](https://github.com/a121514191/Raid/blob/master/%E5%B7%B2%E5%BE%85%E5%91%BD%E7%A3%81%E7%A2%9F.PNG)
+
+強制始硬碟掛掉
+
+
 
 
